@@ -31,7 +31,7 @@ public class EjemploHiloPrioridad1 {
 		
 		h1.paraHilo();
 		h2.paraHilo();
-		h3.paraHilo();
+		h3.paraHilo ();
 		
 		//No siempre va a pasar que el hilo con mayor prioridad se ejecuten antes
 		System.out.println("h2 (Priodidad Máxima): "+h2.getContador());

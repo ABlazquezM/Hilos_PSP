@@ -5,12 +5,15 @@ public class PracticaPabellon extends Thread{
 	
 	private static Semaphore semaforo = new Semaphore(8);  
 	private String nombre;
+	
 	public String getNombre() {
 		return nombre;
 	}
+	
 	public PracticaPabellon(String nombre) {
 		this.nombre = nombre;
 	}
+	
 	public void run() {
 		
 		//System.out.println("Al empezar "+semaforo);
@@ -18,10 +21,11 @@ public class PracticaPabellon extends Thread{
 				
 				semaforo.acquire();
 				sleep(5000);
-				System.out.println(getNombre());
+				System.out.println("Ha empezado el "+getNombre());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			System.out.println("El partido "+getNombre()+" ha terminado");
 			semaforo.release();
 			//System.out.println("Al acabar "+semaforo);
 		

@@ -2,7 +2,7 @@ package HilosSemaforos;
 
 import java.util.concurrent.Semaphore;
 
-//Actualizar desde tres hilos diferentes on un buvcle, para que se vaya actualizando de manera ordenada
+//Actualizar desde tres hilos diferentes on un bucle, para que se vaya actualizando de manera ordenada
 
 public class Hilos extends Thread{
 
@@ -15,7 +15,7 @@ public class Hilos extends Thread{
 	private static Semaphore semaforoMutex = new Semaphore(1); //Este es Mutex, es binario 
 	
 	
-	//Vamos sobreescribir el método ru
+	//Vamos sobreescribir el método run
 	public void run() {
 		for(int i = 1;i<=10;i++) {
 			try {
