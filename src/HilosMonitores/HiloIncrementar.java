@@ -12,7 +12,7 @@ public class HiloIncrementar extends Thread {
 	// Método run
 	public void run() {
 		// Cremaos el bucle para incrementar el contador
-		synchronized (contador) {
+		synchronized (contador) { //Cuando uno accede el otro se queda a la espera
 
 			for (int i = 0; i < 300; i++) {
 				contador.incrementar();
